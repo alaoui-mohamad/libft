@@ -1,19 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   toupper.c                                          :+:      :+:    :+:   */
+/*   ft_alnum.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: m-alaoui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/09 13:18:06 by m-alaoui          #+#    #+#             */
-/*   Updated: 2022/10/09 13:18:29 by m-alaoui         ###   ########.fr       */
+/*   Created: 2022/10/07 11:06:12 by m-alaoui          #+#    #+#             */
+/*   Updated: 2022/10/07 11:06:14 by m-alaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_toupper(int ch)
+int	ft_isalnum(int alnum)
 {
- 	return (ch-32);
+	if (ft_isalpha(alnum) || ft_isdigit(alnum))
+		return (1);
+	return (0);
 }
-

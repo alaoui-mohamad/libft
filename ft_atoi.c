@@ -1,41 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: m-alaoui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/10 20:31:43 by hello             #+#    #+#             */
-/*   Updated: 2022/10/10 22:53:53 by m-alaoui         ###   ########.fr       */
+/*   Created: 2022/10/10 23:03:39 by m-alaoui          #+#    #+#             */
+/*   Updated: 2022/10/10 23:45:16 by m-alaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdio.h>
+#include <stdlib.h>
 
-char	*ft_strcpy(char *dest, const char *src)
+
+int	ft_atoi(char *str)
 {
+	int	sign;
+	int	result;
 	int	i;
 
-	i = 0;
-	while (src[i] != '\0')
+	result = 0;
+    i = 0;
+    sign = 1;
+	while ((str[i] >= 9 && str[i] <= 13) || str[i] == 32)
+		i++;
+	if (str[i++] == '-')
+		sign *= -1;
+	else if(str[i] == '+')
+		i++;
+	while (str[i] && str[i] >= '0' && str[i] <= '9')
 	{
-		dest[i] = src[i];
+		result *= 10;
+		result += str[i] - 48;
 		i++;
 	}
-	dest[i] = '\0';
-	return (dest);
-}
-
-char	*ft_strdup(const char *s)
-{
-	int		i;
-	int		len;
-	char	*str;
-
-	i = 0;
-	len = ft_strlen(s);
-	if (!(str = (char *)malloc(len)))
-		return (0);
-	ft_strcpy(str, s);
-	return (str);
+	return (result * sign);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hello <hello@student.42.fr>                +#+  +:+       +#+        */
+/*   By: m-alaoui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 13:17:06 by m-alaoui          #+#    #+#             */
-/*   Updated: 2022/10/10 19:50:27 by hello            ###   ########.fr       */
+/*   Updated: 2022/10/13 15:05:56 by m-alaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_memcmp(const void *str1, const void *str2, size_t n)
 {
-	int		i;
-	char	*s1;
-	char	*s2;
+	size_t			i;
+	unsigned char	*s1;
+	unsigned char	*s2;
 
 	i = 0;
 	s1 = (unsigned char *)str1;

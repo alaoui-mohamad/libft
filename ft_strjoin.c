@@ -6,7 +6,7 @@
 /*   By: m-alaoui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 01:51:13 by m-alaoui          #+#    #+#             */
-/*   Updated: 2022/10/13 14:13:02 by m-alaoui         ###   ########.fr       */
+/*   Updated: 2022/10/13 14:55:35 by m-alaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,8 +41,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	if (!s1 || !s2)
 		return (0);
-	len_s1 = strlen((char *)s1);
-	len_s2 = strlen((char *)s2);
+	len_s1 = ft_strlen((char *)s1);
+	len_s2 = ft_strlen((char *)s2);
 	total_len = len_s1 + len_s2 + 1;
 	new_str = (char *)malloc(total_len);
 	if (!(new_str))

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hello <hello@student.42.fr>                +#+  +:+       +#+        */
+/*   By: m-alaoui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 18:07:48 by m-alaoui          #+#    #+#             */
-/*   Updated: 2022/10/10 19:50:30 by hello            ###   ########.fr       */
+/*   Updated: 2022/10/13 14:57:37 by m-alaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*memcpy(void *dest, const void *src, size_t size)
 {
-	int		i;
+	size_t		i;
 	char	*string;
 
 	i = 0;

@@ -3,30 +3,30 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hello <hello@student.42.fr>                +#+  +:+       +#+        */
+/*   By: m-alaoui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 13:16:39 by m-alaoui          #+#    #+#             */
-/*   Updated: 2022/10/10 19:50:41 by hello            ###   ########.fr       */
+/*   Updated: 2022/10/11 12:51:20 by m-alaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <string.h>
 
-char	*ft_strchr(char *str, int c)
+char *ft_strchr(const char *s, int c)
 {
 	int		i;
-	char	*s;
+	char	*str;
 
 	i = 0;
-	s = str;
+	str = (char *)s;
 	if (!s)
 		return (0);
-	while (*s)
+	while (*str)
 	{
-		if (*s == c)
-			return (s);
-		s++;
+		if (*str == c)
+			return (str);
+		str++;
 	}
 	return (0);
 }

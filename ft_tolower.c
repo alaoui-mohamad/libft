@@ -6,13 +6,13 @@
 /*   By: m-alaoui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 13:17:51 by m-alaoui          #+#    #+#             */
-/*   Updated: 2022/10/09 13:46:23 by m-alaoui         ###   ########.fr       */
+/*   Updated: 2022/10/12 11:30:54 by m-alaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_toupper(int ch)
+int	ft_tolower(int ch)
 {
 	return (ch + 32);
 }

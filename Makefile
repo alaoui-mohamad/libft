@@ -18,7 +18,7 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	$(LIBC) $(NAME) $(OBJS)
 
-%.o: %.c
+%.o:%.c
 	 $(CC) $(FLAGS) $(INCS) -c $< -o $@
 
 clean:
@@ -28,7 +28,3 @@ fclean: clean
 	$(RM) $(NAME)
 
 re: fclean all
-
- 
-
-

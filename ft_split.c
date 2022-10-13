@@ -6,11 +6,9 @@
 /*   By: m-alaoui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 19:02:26 by m-alaoui          #+#    #+#             */
-/*   Updated: 2022/10/12 19:07:14 by m-alaoui         ###   ########.fr       */
+/*   Updated: 2022/10/13 14:11:17 by m-alaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-
 
 #include "libft.h"
 
@@ -66,7 +64,7 @@ static char	*ft_strdupo(char *str, int *p_i, char sep)
 	return (retu);
 }
 
-char **ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	char	**res;
 	int		i;

@@ -6,7 +6,7 @@
 /*   By: m-alaoui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 16:40:53 by m-alaoui          #+#    #+#             */
-/*   Updated: 2022/10/12 16:43:22 by m-alaoui         ###   ########.fr       */
+/*   Updated: 2022/10/13 14:09:37 by m-alaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	int i;
+	int	i;
 
 	i = ft_strlen(s);
 	write(fd, s, i);

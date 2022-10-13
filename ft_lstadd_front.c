@@ -1,24 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: m-alaoui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/07 17:10:00 by m-alaoui          #+#    #+#             */
-/*   Updated: 2022/10/12 23:33:41 by m-alaoui         ###   ########.fr       */
+/*   Created: 2022/10/13 01:19:17 by m-alaoui          #+#    #+#             */
+/*   Updated: 2022/10/13 14:08:27 by m-alaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	size_t	i;
-	char	*ptr;
-
-	i = 0;
-	ptr = (char *)s;
-	while (i < n)
-		ptr[i++] = 0;
+	if (!(*lst) && !new)
+	{
+		new->next = *lst;
+		*lst = new;
+	}
 }

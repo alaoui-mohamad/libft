@@ -6,13 +6,13 @@
 /*   By: m-alaoui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 10:41:14 by m-alaoui          #+#    #+#             */
-/*   Updated: 2022/10/07 10:41:16 by m-alaoui         ###   ########.fr       */
+/*   Updated: 2022/10/12 16:14:10 by m-alaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(char alpha)
+int	ft_isalpha(int alpha)
 {
 	if ((alpha >= 'A' && alpha <= 'Z') || (alpha >= 'a' && alpha <= 'z'))
 		return (1);

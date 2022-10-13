@@ -6,16 +6,16 @@
 /*   By: m-alaoui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 22:25:18 by m-alaoui          #+#    #+#             */
-/*   Updated: 2022/10/10 22:25:19 by m-alaoui         ###   ########.fr       */
+/*   Updated: 2022/10/13 14:07:02 by m-alaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*calloc(size_t nmemb, size_t size)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-	char *pointer;
-	int len;
+	char	*pointer;
+	int		len;
 
 	len = nmemb * size;
 	pointer = malloc(len);

@@ -6,7 +6,7 @@
 /*   By: m-alaoui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 14:40:51 by m-alaoui          #+#    #+#             */
-/*   Updated: 2022/10/17 09:51:13 by m-alaoui         ###   ########.fr       */
+/*   Updated: 2022/10/13 14:40:52 by m-alaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,9 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	if (lst && del)
+	if (!lst && !del)
+	{
 		del(lst->content);
-	free(lst);
-	
+		free(lst);
+	}
 }

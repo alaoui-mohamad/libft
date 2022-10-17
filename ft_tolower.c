@@ -6,15 +6,13 @@
 /*   By: m-alaoui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 13:17:51 by m-alaoui          #+#    #+#             */
-/*   Updated: 2022/10/13 21:22:07 by m-alaoui         ###   ########.fr       */
+/*   Updated: 2022/10/12 11:30:54 by m-alaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_tolower(int c)
+int	ft_tolower(int ch)
 {
-	if (c >= 'A' && c <= 'Z')
-		return (c + 32);
-	return (c);
+	return (ch + 32);
 }

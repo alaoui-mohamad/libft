@@ -6,19 +6,21 @@
 /*   By: m-alaoui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 22:25:18 by m-alaoui          #+#    #+#             */
-/*   Updated: 2022/10/14 00:27:26 by m-alaoui         ###   ########.fr       */
+/*   Updated: 2022/10/13 14:07:02 by m-alaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t count, size_t size)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-	void *pointer;
+	char	*pointer;
+	int		len;
 
-	pointer = malloc(count * sizeof(size));
+	len = nmemb * size;
+	pointer = malloc(len);
 	if (!pointer)
 		return (pointer);
-	ft_bzero(pointer, count*size);
+	ft_bzero(pointer, len);
 	return (pointer);
 }

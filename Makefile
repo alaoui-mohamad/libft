@@ -6,7 +6,7 @@
 #    By: m-alaoui <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/13 14:47:31 by m-alaoui          #+#    #+#              #
-#    Updated: 2022/10/13 14:47:48 by m-alaoui         ###   ########.fr        #
+#    Updated: 2022/10/14 04:51:40 by m-alaoui         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,34 +28,23 @@ OBJ=$(FILES:=.o)
 BOBJ=$(BFILES:=.o)
 NAME=libft.a
 
-RED = \033[1;31m
-GREEN = \033[1;32m
-YELLOW = \033[1;33m
-BLUE = \033[1;34m
-RESET = \033[0m
-
 .PHONY: all bonus clean fclean re
 
 all: $(NAME)
-	@echo "$(RED)------safi done------$(RESET)"
-
 
 bonus: all $(BOBJ)
-	echo "hani kan commpili $(GREEN)" $< "$(RESET)akhay sat"
-	@$(AR) $(NAME) $(BOBJ)
+	$(AR) $(NAME) $(BOBJ)
 
 $(NAME): $(OBJ)
-	@$(AR) $(NAME) $(OBJ)
+	$(AR) $(NAME) $(OBJ)
 
 %.o: %.c libft.h
-	@echo "hani kan commpili$(GREEN)" $< "$(RESET)akhay sat"
-	@$(CC) $(FLAGS) -c $< -o $@
+	$(CC) $(FLAGS) -c $< -o $@
 
 clean:
-	@echo "$(YELLOW)Cleaned$(RESET)"
-	@$(RM) $(OBJ) $(BOBJ)
+	$(RM) $(OBJ) $(BOBJ)
 
 fclean: clean
-	@$(RM) $(NAME)
+	$(RM) $(NAME)
 
 re: fclean all

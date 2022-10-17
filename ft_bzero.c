@@ -6,7 +6,7 @@
 /*   By: m-alaoui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 17:10:00 by m-alaoui          #+#    #+#             */
-/*   Updated: 2022/10/12 23:33:41 by m-alaoui         ###   ########.fr       */
+/*   Updated: 2022/10/13 21:12:59 by m-alaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,10 @@
 void	ft_bzero(void *s, size_t n)
 {
 	size_t	i;
-	char	*ptr;
+	unsigned char	*ptr;
 
 	i = 0;
-	ptr = (char *)s;
+	ptr = s;
 	while (i < n)
 		ptr[i++] = 0;
 }

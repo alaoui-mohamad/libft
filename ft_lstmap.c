@@ -1,45 +1,64 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstiter.c                                       :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: m-alaoui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/13 14:40:57 by m-alaoui          #+#    #+#             */
-/*   Updated: 2022/10/17 01:59:29 by m-alaoui         ###   ########.fr       */
+/*   Created: 2022/10/14 05:21:22 by m-alaoui          #+#    #+#             */
+/*   Updated: 2022/10/17 10:02:29 by m-alaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstiter(t_list *lst, void (*f)(void *))
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	if (lst && f)
+	t_list	*tmp;
+	t_list	*new_elemt;
+
+	tmp = NULL;
+	if (!f || !del)
+		return (NULL);
+	while (lst)
 	{
-		while (lst)
+		new_elemt = ft_lstnew(f(lst->content));
+		if (!(new_elemt))
 		{
-			f(lst->content);
-			lst = lst->next;
+			ft_lstclear(&tmp, del);
+			return (NULL);
 		}
+		ft_lstadd_back(&tmp, new_elemt);
+		lst = lst->next;
 	}
+	return (tmp);
 }
-void one(void *c)
+void ft(char *t)
 {
-	printf("%s\n",(char *)c);
+	
+	*(char *)t++;
 }
 int main()
 {
+
 	char *e11 = ft_strdup("alaoui");
-	char *e22 = ft_strdup("bot");
+	char *e22 = ft_strdup("ala");
 	
 	t_list *e1 = ft_lstnew(e11);
 	t_list *e2 = ft_lstnew(e22);
-	t_list *tmp;
 	
+	t_list *tmp;
+	t_list *bola;
 	tmp = e1;
 	
 	e1->next = e2;
 	e2->next = NULL;
+	bola = ft_lstmap(tmp, (void*)&ft,&free);
 	
-	ft_lstiter(tmp,one);
+	while (bola)
+	{
+		printf("->%s\n",bola->content);
+		bola = bola->next;
+	}
+	
 } 

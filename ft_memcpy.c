@@ -6,13 +6,13 @@
 /*   By: m-alaoui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 18:07:48 by m-alaoui          #+#    #+#             */
-/*   Updated: 2022/10/13 14:57:37 by m-alaoui         ###   ########.fr       */
+/*   Updated: 2022/10/13 15:25:48 by m-alaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*memcpy(void *dest, const void *src, size_t size)
+void	*ft_memcpy(void *dest, const void *src, size_t size)
 {
 	size_t		i;
 	char	*string;

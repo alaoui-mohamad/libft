@@ -6,7 +6,7 @@
 /*   By: m-alaoui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 19:28:56 by m-alaoui          #+#    #+#             */
-/*   Updated: 2022/10/13 14:51:28 by m-alaoui         ###   ########.fr       */
+/*   Updated: 2022/10/14 01:48:22 by m-alaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,5 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		i++;
 	if (n == 0)
 		return (0);
-	return (s1[i] - s2[i]);
+	return ((unsigned char )s1[i] - (unsigned char )s2[i]);
 }

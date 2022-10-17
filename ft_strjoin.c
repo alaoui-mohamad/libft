@@ -6,13 +6,13 @@
 /*   By: m-alaoui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 01:51:13 by m-alaoui          #+#    #+#             */
-/*   Updated: 2022/10/13 14:55:35 by m-alaoui         ###   ########.fr       */
+/*   Updated: 2022/10/13 22:17:58 by m-alaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char	*ft_strcat(char *dest, char *src)
+static char	*ft_strcat(char *dest, const char *src)
 {
 	int	i;
 	int	j;
@@ -23,11 +23,11 @@ static char	*ft_strcat(char *dest, char *src)
 		i++;
 	while (src[j])
 	{
-		dest[i] = src[j];
+		dest[i+j] = src[j];
 		j++;
-		i++;
+		
 	}
-	dest[j + i] = '\0';
+	dest[i+j] = '\0';
 	return (dest);
 }
 
@@ -36,20 +36,48 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		i;
 	int		len_s1;
 	int		len_s2;
-	int		total_len;
 	char	*new_str;
 
-	if (!s1 || !s2)
-		return (0);
-	len_s1 = ft_strlen((char *)s1);
-	len_s2 = ft_strlen((char *)s2);
-	total_len = len_s1 + len_s2 + 1;
-	new_str = (char *)malloc(total_len);
+	if (!s1 || !s1)
+		return 0;
+	len_s1 = ft_strlen(s1);
+	len_s2 = ft_strlen(s2);
+	new_str = (char *)malloc(sizeof(char) *(len_s1 + len_s2 + 1));
 	if (!(new_str))
-		return (0);
-	i = -1;
-	while (s1[++i])
+		return (NULL);
+	i = 0;
+	while (s1[i])
+	{
 		new_str[i] = s1[i];
-	ft_strcat(new_str, (char *)s2);
+		i++;
+	}
+	new_str[i] = '\0';
+	ft_strcat(new_str,s2);
 	return (new_str);
 }
+// char	*ft_strjoin(char const *s1, char const *s2)
+// {
+// 	char	*str;
+// 	int		s1_len;
+// 	int		s2_len;
+// 	int		i;
+
+// 	i = 0;
+// 	if (!s1 || !s2)
+// 		return (0);
+// 	s1_len = ft_strlen(s1);
+// 	s2_len = ft_strlen(s2);
+// 	str = malloc(sizeof(char) * (s1_len + s2_len + 1));
+// 	if (!str)
+// 		return (NULL);
+// 	while (s1[i])
+// 	{
+// 		str[i] = s1[i];
+// 		i++;
+// 	}
+// 	i = 0;
+// 	while (s2[i])
+// 		str[s1_len++] = s2[i++];
+// 	str[s1_len] = '\0';
+// 	return (str);
+// }

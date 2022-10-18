@@ -6,7 +6,7 @@
 /*   By: m-alaoui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 01:19:17 by m-alaoui          #+#    #+#             */
-/*   Updated: 2022/10/13 14:08:27 by m-alaoui         ###   ########.fr       */
+/*   Updated: 2022/10/14 17:07:53 by m-alaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	if (!(*lst) && !new)
+	if (lst && new)
 	{
 		new->next = *lst;
 		*lst = new;

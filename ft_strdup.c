@@ -6,7 +6,7 @@
 /*   By: m-alaoui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 20:31:43 by hello             #+#    #+#             */
-/*   Updated: 2022/10/13 14:13:54 by m-alaoui         ###   ########.fr       */
+/*   Updated: 2022/10/18 16:25:05 by m-alaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ char	*ft_strdup(const char *s)
 
 	i = 0;
 	len = ft_strlen(s);
-	str = (char *)malloc(len);
+	str = (char *)malloc(len + 1);
 	if (!(str))
 		return (0);
 	ft_strcpy(str, s);
